@@ -76,5 +76,40 @@ namespace EquazioniLibrary.Test_Lucan
 
             Assert.AreEqual(Risultato, Risultato2);
         }
+
+        //Controlli per un'equazione di secondo grado
+        [TestMethod]
+        public void Test_IsDegree2()
+        {
+            double a = 1;
+            bool Risultato = true;
+
+            bool Risultato2 = Equazioni.IsDetermined(a);
+
+            Assert.AreEqual(Risultato, Risultato2);
+        }
+
+        [TestMethod]
+        public void Test_IsDegree2_1()
+        {
+            double a = 0;
+            bool Risultato = false;
+
+            bool Risultato2 = Equazioni.IsDetermined(a);
+
+            Assert.AreEqual(Risultato, Risultato2);
+        }
+
+        [TestMethod]
+        public void Test_IsDegree2_2()
+        {
+            double a = -1;
+            bool Risultato = true;
+
+            bool Risultato2 = Equazioni.IsDetermined(a);
+
+            Assert.AreEqual(Risultato, Risultato2);
+        }
+
     }
 }
