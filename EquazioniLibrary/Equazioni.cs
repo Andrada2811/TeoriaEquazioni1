@@ -27,5 +27,30 @@ namespace EquazioniLibrary
 
             return Risposta;
         }
+
+        //Metodo per un'equazione impossibile
+        public static bool IsInconsisted (double a, double b)
+        {
+            bool Risposta = false;
+
+            if (a==0 || b!=0)
+            {
+                Risposta = true;
+
+            }
+
+            else
+            {
+                Risposta = false;
+            }
+
+            return Risposta;
+        }
+
+        //Metodo per un'equazione di secondo grado
+        public static bool IsDegree2 (double a)
+        {
+
+        }
     }
 }
